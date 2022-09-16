@@ -34,8 +34,7 @@ function Book(author, language, subject, title) {
 
 
 
-    li.append(aT);
-    li.append(ulBook);
+  
 
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "-";
@@ -43,22 +42,28 @@ function Book(author, language, subject, title) {
     removeBtn.addEventListener("click", function () {
       li.remove();
     });
-
+    //Create a remove Button that allows to us to remove books from our array.
+    //I realize this permanently removes the books, and this is NOT what we are looking for, but I
 
     const addCom = document.createElement("button");
     const addComInp = document.createElement("input");
-    const comment = document.createElement("li")
+    addComInp.maxLength = "280";
     addCom.textContent = "+";
     addComInp.placeholder = "Add Comment";
-    comment.textContent = addComInp.value + " ";
-    ulBook.append(addCom, addComInp, comment);
+    ulBook.append(addCom, addComInp);
     
-    addCom.addEventListener("click", this.render)
-
+    addCom.addEventListener("click", function () {
+      const comment = document.createElement("li");
+      comment.textContent = addComInp.value + " ";
+ 
+      ulBook.append(comment);
+    });
+    
+    
+    li.append(aT);
+    li.append(ulBook);
     return li;
   };
-  // Create list item representing a Book and include the title of the Book in the list item.
-  /* NOTE: Favorite Feature is currently not implemented. */
 }
 
 
