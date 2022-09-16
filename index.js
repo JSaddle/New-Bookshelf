@@ -4,7 +4,7 @@
 const bookList = document.querySelector(".books");
 const bookshelf = new Bookshelf();
 
-// Load in book data
+
 for (const bookInfo of bookData) {
   const book = new Book(
     bookInfo.author,
@@ -14,6 +14,8 @@ for (const bookInfo of bookData) {
   );
   bookshelf.addBook(book);
 }
+// Load in book data
+
 
 const render = () => {
   bookList.replaceChildren(bookshelf.render());
@@ -23,6 +25,7 @@ const render = () => {
 bookshelf.filterVisibleBooks(() => true);
 bookshelf.sortVisibleBooks((a, b) => (a.title.localeCompare(b.title)));
 render();
+// Render the first time the page loads
 
 //#endregion Initialization
 
@@ -32,6 +35,8 @@ render();
 
 const searchInput = document.querySelector("nav input");
 const searchBtn = document.querySelector(".searchBtn");
+// Declare search button and search input.
+
 
 searchBtn.addEventListener("click", () => {
   const query = searchInput.value.toLowerCase();
@@ -42,7 +47,9 @@ searchBtn.addEventListener("click", () => {
   bookshelf.filterVisibleBooks(searchFn);
   render();
 });
-
+// Create EventListener so that when the Search Button is clicked,
+// we are able to compare our search input to any title, subject,
+// 
 
 //#endregion Searching
 
