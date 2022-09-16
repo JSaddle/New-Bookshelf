@@ -110,6 +110,9 @@ sortBy.addEventListener("change", () => {
 // I had trouble figuring out how to refer to our original books array, and thus, settled with what I
 // created below. I look forward to getting a better understanding of how to approach this issue in the future.
 
+//ALSO, ADDED BOOKS SHOW UP AT BOTTOM OF BOOKSHELF LIST. Thus, you may have to scroll down the page to see the added book. Just a heads up.
+
+
 ////////IMPORTANT NOTE//////////////////////////////////////////////////
 
 
@@ -125,15 +128,12 @@ const addBtn = document.querySelector("#add-btn");
 
 
 function addBook1() {
-  // take user input fields and add them to a li
-  // append the li to the page
-  
-  
     const li = document.createElement("li");
     const aT = document.createElement("a");
     aT.id = "aT";
     aT.textContent = inpTitle.value + " ";
     // Create separate element for title so that we can append list of author, language, subject, to it later on.
+    // Also, by creating an ID for our title, we can make our title Bold, while keeping our other criteria normal.
 
      const ulBook = document.createElement("ul");
      // Create list element for each Book containing Author, Language, Subject.
@@ -171,7 +171,7 @@ function addBook1() {
 
   return li;
 }
-
+// Create an AddBook function so that we can add a Book with any title, author, subject, language, to our Bookshelf.
 
 addBtn.addEventListener('click', addBook1)
 // Create an Event Listener so that when we click Add Book, it shows up within our array.
