@@ -1,15 +1,18 @@
+
 function Bookshelf(books = []) {
   this.books = books;
   this.visibleBooks = books;
 
   this.addBook = function (book) {
     this.books.push(book);
-  };
+  }
+  // Use .push to add a book into our empty array of books, also known as our Bookshelf.
+
 
   this.removeBook = function (book) {
-    // Find a book with the same title
-    const idx = this.books.map((b) => b.title).indexOf(book.title);
-    // Use indexOf to check if the book with the given title is in the array.
+    // Find a book with the same title, subject, author, or language.
+    const idx = this.books.map((b) => b.title || b.author || b.language || b.subject).indexOf(book.title || book.author || book.language || book.subject);
+    // Use indexOf to check if the book with the given title, subject, author, or language is in the array.
     // Use map to create a new array which doesn't include the book we chose to remove.
     if (idx !== -1) {
       this.books.splice(idx, 1);
@@ -42,4 +45,9 @@ function Bookshelf(books = []) {
   this.sortVisibleBooks = function (sortFn) {
     this.visibleBooks.sort(sortFn);
   };
+
+
+
 }
+
+

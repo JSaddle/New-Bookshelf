@@ -1,0 +1,143 @@
+#searchInp{
+    width: 190px
+}
+/* Here, we define the width of the inputs when searching for a book. */
+
+
+#addTitle, #addAuthor, #addLanguage, #addSubject{
+    width: 100px
+}
+/* Here, we define the width of the inputs when adding a book. */
+
+
+header, footer{
+    background: rgb(18, 87, 24);
+    color: white;
+}
+/* Here, we are defining the color of the Header/Footer.*/
+
+header {
+    
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5em 1em;
+    box-shadow: 0 2px 4px -2px black;
+}
+/* Here, we are providing the font & position properties of the Header.*/
+
+.name{
+    float: left;
+    box-sizing: border-box;
+}
+/* Here, we are positioning the name on the left side of the navbar.*/
+
+.tabs {
+    float: right;
+}
+/* Here, we are positioning the tabs on the right side of the navbar.*/
+
+.tabs a {
+    flex-direction: wrap;
+    color: white;
+    text-decoration: none;
+}
+/* Here, we are styling the tabs.*/
+
+.tabs a.active {
+    border-bottom: 1px solid white;
+}
+/* Here, we are ensuring that the current tab we are on gets underlined.*/
+
+.tabs a:hover {
+    border-bottom: 1px solid white;
+}
+
+footer {
+    font-size: 2rem;
+    box-sizing: border-box;
+    position: fixed;
+    height: 64px;
+    padding: 16px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px -2px black;
+}
+/* Here, we are providing the font & properties of the Footer.*/
+
+.number {
+    float: left;
+    text-decoration: none;
+    color: white;
+}
+/* Here, we are positiong the number on the left side of the footer.*/
+
+.email {
+    float: right;
+    text-decoration: none;
+    color: white;
+}
+/* Here, we are positiong the email on the right side of the footer.*/
+
+.number:hover, .email:hover, .name:hover {
+    border-bottom: 1px solid white;
+  }
+
+.searchNav {
+    margin: 100px 10% 10px 10%;
+    width: 400px;
+    height: 120px;
+    padding: 0 auto;
+    box-sizing: border-box;
+    border: rgb(18, 87, 24) solid;
+    background-color: rgb(143, 196, 119);
+  
+}
+
+.addRemBook {
+    margin: -130px 30% 10px 40%;
+    width: 600px;
+    height: 120px;
+    padding: 0 auto;
+    box-sizing: border-box;
+    border: rgb(18, 87, 24) solid;
+    background-color: rgb(143, 196, 119);
+  
+}
+
+
+#searchName, #addBookh1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    font-weight: normal; 
+}
+
+#centerNav, #addNav {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background-color: white;
+    min-height: 100vh;
+    padding: 64px 24px 96px;
+    box-shadow: 5px 10px 12px 10px  rgb(18, 87, 24);
+    border: 3pt solid rgb(18, 87, 24);
+    box-sizing: border-box;
+    /* margin: 100px 200px 100px 200px; */
+    justify-content: center;
+    margin: 25px 50px 150px;
+}
+/* Here, we are styling & positioning the 'main' section.*/
+
+#aT {
+    font-weight: Bold;
+
+}
+
+

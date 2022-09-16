@@ -5,20 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jacob Saddler Bookshelf</title>
+    <link rel="stylesheet" href="main.css">
   </head>
+  <header>
+    <span class="name">Jacob Saddler's Bookshelf</span>
+    <nav class="tabs">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="Stores.html">Store Locator</a>
+        <!--Create header links to other (non-existent) pages on the site.-->
+    </nav>
+</header>
   <body>
-    <nav>
-      <input placeholder="Search">
-      <button class="searchBtn">Search</button>
-      <select class="sortBy">
+    <div id="searchBoxes">
+    <nav  class="searchNav">
+      <h1 id="searchName">Search</h1>
+      <div id="centerNav">
+      <input id="searchInp" placeholder="Title, Author, Language, Subject">
+      <button class="searchBtn" id="searchBtn">Search</button>
+      <select class="sortBy" id="sortBy">
         <option value="titleaz">Title A-Z</option>
         <option value="titleza">Title Z-A</option>
         <option value="authoraz">Author A-Z</option>
         <option value="authorza">Author Z-A</option>
+        <option value="subjectaz">Subject A-Z</option>
+        <option value="subjectza">Subject Z-A</option>
+        <option value="langaz">Language A-Z</option>
+        <option value="langza">Language Z-A</option>
+        <!--Create sorting criteria for title, author, subject, and language.-->
       </select>
-      </select>
+      </div>
     </nav>
+    <div class="addRemBook">
+      <h1 id="addBookh1">Add A Book!</h1>
+      <div id="addNav">
+        <input id="addTitle" placeholder="Title">
+        <input id="addAuthor" placeholder="Author">
+        <input id="addLanguage" placeholder="Language">
+        <input id="addSubject" placeholder="Subject">
+        <button type="button" id="add-btn">Add Book</button>
+      </div>
+    </div>
+    </nav>
+    </div>
     <main id="app">
+      <h1 id="booklistTitle">Bookshelf</h1>
       <ul class="books"></ul>
     </main>
 
@@ -27,4 +58,9 @@
     <script src="js/bookshelf.js"></script>
     <script src="index.js"></script>
   </body>
+  <footer>
+    <a class="number" href="tel:8475333838">Can't find a book? Call: 847-533-3838</span>
+    <a class="email" href = "mailto: jacobasaddler@gmail.com">Book not in stock? Email: jacobasaddler@gmail.com</a>
+    <!--Here, we have created a link for both phone and email.-->
+</footer>
 </html>
