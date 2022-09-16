@@ -120,11 +120,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;  
-    font-weight: normal; 
+    font-weight: normal;
+    font-size: 18pt; 
 }
 /* Define properties of the titles of our Search feature and Add Book feature.
     -This way, they properly show up centered as a header for their
-     respective sections. */
+     respective sections.
+     -Also, set font-size & weight to ensure "Search" & "Add A Book!" appear the same.*/
 
 #centerNav, #addNav {
     display: flex;
