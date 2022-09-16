@@ -15,7 +15,6 @@ header, footer{
 /* Define the color of the text & the background color of the Header/Footer.*/
 
 header {
-    
     font-size: 2rem;
     position: fixed;
     top: 0;
@@ -140,7 +139,6 @@ main {
     box-shadow: 5px 10px 12px 10px  rgb(18, 87, 24);
     border: 3pt solid rgb(18, 87, 24);
     box-sizing: border-box;
-    /* margin: 100px 200px 100px 200px; */
     justify-content: center;
     margin: 25px 50px 150px;
 }
