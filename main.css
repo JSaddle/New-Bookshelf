@@ -1,20 +1,18 @@
 #searchInp{
     width: 190px
 }
-/* Here, we define the width of the inputs when searching for a book. */
-
+/* Define the width of the inputs when searching for a book. */
 
 #addTitle, #addAuthor, #addLanguage, #addSubject{
     width: 100px
 }
-/* Here, we define the width of the inputs when adding a book. */
-
+/* Define the width of the inputs when adding a book. */
 
 header, footer{
     background: rgb(18, 87, 24);
     color: white;
 }
-/* Here, we are defining the color of the Header/Footer.*/
+/* Define the color of the text & the background color of the Header/Footer.*/
 
 header {
     
@@ -26,34 +24,37 @@ header {
     padding: 0.5em 1em;
     box-shadow: 0 2px 4px -2px black;
 }
-/* Here, we are providing the font & position properties of the Header.*/
+/* Provide the font & position properties of the Header:
+    -Make Header fixed to top of screen.
+    -Create a black shadow around the header.*/
 
 .name{
     float: left;
     box-sizing: border-box;
 }
-/* Here, we are positioning the name on the left side of the navbar.*/
+/* Position the name on the left side of the navbar.*/
 
 .tabs {
     float: right;
 }
-/* Here, we are positioning the tabs on the right side of the navbar.*/
+/* Position the tabs on the right side of the navbar.*/
 
 .tabs a {
     flex-direction: wrap;
     color: white;
     text-decoration: none;
 }
-/* Here, we are styling the tabs.*/
+/* Style the tabs so that the text is white and they are bunched together.*/
 
 .tabs a.active {
     border-bottom: 1px solid white;
 }
-/* Here, we are ensuring that the current tab we are on gets underlined.*/
+/* Ensure that the current tab we are on gets underlined.*/
 
-.tabs a:hover {
+.tabs a:hover, .number:hover, .email:hover, .name:hover{
     border-bottom: 1px solid white;
 }
+/* Ensure that when we hover over a tab, phone #, email, or name, that such property gets underlined.*/
 
 footer {
     font-size: 2rem;
@@ -67,25 +68,23 @@ footer {
     text-align: center;
     box-shadow: 0 -2px 4px -2px black;
 }
-/* Here, we are providing the font & properties of the Footer.*/
+/* Provide the font & properties of the Footer:
+    -Make the footer fixed to the bottom of the screen.
+    -Create a black shadow around the footer.*/
 
 .number {
     float: left;
     text-decoration: none;
     color: white;
 }
-/* Here, we are positiong the number on the left side of the footer.*/
+/* Position the phone number on the left side of the footer.*/
 
 .email {
     float: right;
     text-decoration: none;
     color: white;
 }
-/* Here, we are positiong the email on the right side of the footer.*/
-
-.number:hover, .email:hover, .name:hover {
-    border-bottom: 1px solid white;
-  }
+/* Position the email on the right side of the footer.*/
 
 .searchNav {
     margin: 100px 10% 10px 10%;
@@ -97,6 +96,10 @@ footer {
     background-color: rgb(143, 196, 119);
   
 }
+/* Define properties of the Search Nav:
+    -Create green border with a light green background.
+    -Set margin and width so it's properly positioned
+     in comparison with the rest of page. */
 
 .addRemBook {
     margin: -130px 30% 10px 40%;
@@ -108,7 +111,11 @@ footer {
     background-color: rgb(143, 196, 119);
   
 }
-
+/* Define properties of the Add Book Feature:
+    -Create green border with a light green background.
+        (This way the Search Nav and Add Book are matching styles)
+    -Set margin, width, height, padding so it's properly positioned
+     in comparison with the rest of the page.*/
 
 #searchName, #addBookh1 {
     display: flex;
@@ -116,11 +123,15 @@ footer {
     align-items: center;  
     font-weight: normal; 
 }
+/* Define properties of the titles of our Search feature and Add Book feature.
+    -This way, they properly show up centered as a header for their
+     respective sections. */
 
 #centerNav, #addNav {
     display: flex;
     justify-content: center;
 }
+/* Set the display of the Navs so that they properly show up centered & aligned within their respective boxes. */
 
 main {
     background-color: white;
@@ -133,11 +144,16 @@ main {
     justify-content: center;
     margin: 25px 50px 150px;
 }
-/* Here, we are styling & positioning the 'main' section.*/
+/* Style & Position the 'main' section, which acts as our visible book array section.
+    -Craft a green border, with a blurred green border-shadow, as well as a white background-color.
+    -Center and declare margins of our bookshelf section.*/
 
 #aT {
     font-weight: Bold;
-
 }
+/* Set the title of each book to be Bold, so it stands out from the other characteristics of the book. */
 
-
+#comment {
+    overflow-wrap: break-word;
+}
+/* Put an overflow-wrap on the comment so that it does not go outside the bounds of our styled list. */

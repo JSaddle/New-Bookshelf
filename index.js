@@ -49,7 +49,7 @@ searchBtn.addEventListener("click", () => {
 });
 // Create EventListener so that when the Search Button is clicked,
 // we are able to compare our search input to any title, subject,
-// 
+// language, or author to any/all books in our array.
 
 //#endregion Searching
 
@@ -92,12 +92,25 @@ sortBy.addEventListener("change", () => {
   bookshelf.sortVisibleBooks(sortFn);
   render();
 });
+// Create an Event Listener that sorts the array based upon the given criteria.
+// For example, if we click "Subject Z-A", the array will be sorted from Z to A
+// based upon the first letter of the subjects in each given book.
+
+
+
+
+
 
 //#endregion Sorting
 
 
+////////IMPORTANT NOTE//////////////////////////////////////////////////
 
+// I realize that the functionality of Add A Book! below does not properly add the book to our books Array.
+// I had trouble figuring out how to refer to our original books array, and thus, settled with what I
+// created below. I look forward to getting a better understanding of how to approach this issue in the future.
 
+////////IMPORTANT NOTE//////////////////////////////////////////////////
 
 
 const inpTitle = document.querySelector("#addTitle");
@@ -105,7 +118,7 @@ const inpAuthor = document.querySelector("#addAuthor");
 const inpLanguage = document.querySelector("#addLanguage");
 const inpSubject = document.querySelector("#addSubject");
 const addBtn = document.querySelector("#add-btn");
-
+// Declare input variables for our Add A Book! feature.
 
 
 
@@ -145,21 +158,23 @@ function addBook1() {
 
      li.append(aT);
      li.append(ulBook);
+     // Append list items and title to one whole list item, so that everything is glued together.
   
   const removeBtn = document.createElement("button");
   removeBtn.textContent = "-";
   aT.append(removeBtn);
   bookList.append(li);
-
   removeBtn.addEventListener("click", function () {
     bookList.removeChild(li);
   });
+  // Create a remove Button that allows to us to remove our created books from our array.
+
   return li;
 }
 
 
 addBtn.addEventListener('click', addBook1)
-
+// Create an Event Listener so that when we click Add Book, it shows up within our array.
 
 
 
